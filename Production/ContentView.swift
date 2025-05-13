@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack {
            // here are the two views
             ProductView()
-            repeticion()
+            RepeticionView()
         }
         .padding()
     }
@@ -20,7 +20,7 @@ struct ContentView: View {
 
 //Estructura con id
 struct ProductView: View{
-    let productos = ["melon, sandia, papa, fresa, papaya"]
+    let productos = ["melon", "sandia", "papa", "fresa", "papaya"]
     var body: some View{
         VStack{
             ForEach(productos, id: \.self){name in
@@ -45,7 +45,7 @@ let trabajadores = [
     Perfiles(usuarios: "Selena", rol: "iOS Developer")
 ]
 
-struct repeticion: View{
+struct RepeticionView: View{
     var body:some View{
         VStack{
             ForEach(trabajadores){name in
